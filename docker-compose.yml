@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: GoBarber
+    restart: always
+    ports:
+      - ${SQLSERVER_DOCKER_PORT}:1433
+    environment:
+      - ACCEPT_EULA=y
+      - SA_PASSWORD=${SQLSERVER_DOCKER_PASSWORD}
+      - MSSQL_PID=Developer

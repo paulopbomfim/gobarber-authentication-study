@@ -1,0 +1,50 @@
+﻿@{
+    Layout = null
+    ViewData["Title"] = "Login";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GoBarber</title>
+</head>
+<body>
+    <header>
+        <img src="/assets/logo.png" alt="Go Barber">
+    </header>
+    <main class="">
+        <strong>Faça seu login</strong>
+        <form asp-controller="" asp-action="">
+            <label for="email">
+                Email
+                <div>
+
+                    <input type="email" name="email" id="email">
+                </div>
+            </label>
+
+            <label for="password">
+                Senha
+                <div>
+
+                    <input type="password" name="password" id="password">
+                </div>
+            </label>
+
+            <input type="submit" value="Entrar">
+        </form>
+
+        <a >Esqueci minha senha</a>
+    </main>
+    <footer>
+        <a asp-controller="Home" asp-action="Signup">
+            Criar conta
+        </a>
+    </footer>
+</body>
+</html>
+
