@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+@{
+    Layout = null;
+    ViewData["Title"] = "Recuperação de senha";
+}
+
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -20,20 +25,19 @@
     </script>
     <title>@ViewData["Title"] - GoBarber</title>
 </head>
-<body class="bg-zinc-700 mx-auto h-screen">
-    <header class="w-screen bg-zinc-800">
-        <div class="flex justify-between items-center py-4 w-[80%] mx-auto">
-            <img class="w-[137px]" src="/assets/logo.png" alt="Go Barber">
-            <a class="flex items-center gap-2 text-white px-4 py-2 rounded-md text-xl bg-zinc-900 hover:bg-zinc-700 transition duration-300 cursor-pointer" asp-controller="Home" asp-action="Index">
-                <i class="ph-sign-out text-2xl"></i>
-                <span>Sair</span>
-            </a>
-        </div>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
+<body class="bg-zinc-800/80 bg-blend-hard-light bg-[url('/assets/barber.png')] bg-no-repeat bg-cover bg-[top_right_-40rem] w-screen h-screen">
+    <div class="w-2/5 h-full gap-20 flex items-center justify-center flex-col bg-zinc-800">
+        <header>
+            <img src="/assets/logo.png" alt="Go Barber">
+        </header>
+        <main class="flex flex-col gap-6 w-full items-center">
+            <i class="ph-check-circle text-white text-8xl"></i>
+
+            <strong class="font-display font-medium text-white text-2xl">
+                Email enviado com sucesso
+            </strong>
         </main>
     </div>
 </body>
 </html>
+

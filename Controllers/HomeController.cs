@@ -10,4 +10,24 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult Client()
+    {
+        return View();
+    }
+
+    public IActionResult Barber()
+    {
+        return View();
+    }
+
+    public IActionResult PasswordRecovery()
+    {
+        return View();
+    }
+
+    public IActionResult EmailSentSuccessfully()
+    {
+        return View();
+    }
+
 }
