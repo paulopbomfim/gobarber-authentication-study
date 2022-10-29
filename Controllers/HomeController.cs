@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 // using GoBarber.Models;
 
 namespace GoBarber.Controllers;
@@ -21,6 +21,11 @@ public class HomeController : Controller
     }
 
     public IActionResult PasswordRecovery()
+    {
+        return View();
+    }
+
+    public IActionResult EmailSentSuccessfully()
     {
         return View();
     }
