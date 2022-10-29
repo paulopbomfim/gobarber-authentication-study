@@ -1,7 +1,13 @@
+using GoBarber.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ApplicationDataContext>();
+builder.Services.AddScoped<IApplicationDataContext, ApplicationDataContext>();
+
+DotNetEnv.Env.Load();
 
 var app = builder.Build();
 
