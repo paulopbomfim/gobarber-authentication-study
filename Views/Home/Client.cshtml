@@ -1,0 +1,81 @@
+@{
+    Layout = null;
+    ViewData["Title"] = "Sign-up";
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'display': ['Roboto Slab', 'ui-serif']
+                }
+            }
+        }
+    </script>
+    <title>@ViewData["Title"] - GoBarber</title>
+</head>
+<body class="bg-zinc-800/80 bg-blend-hard-light bg-[url('/assets/barbershop.jpg')] bg-no-repeat bg-cover bg-[bottom_-30rem_left_-20rem] flex justify-end w-screen h-screen">
+    <div class="w-2/5 h-full gap-20 flex items-center justify-center flex-col bg-zinc-800">
+        <header>
+            <img src="/assets/logo.png" alt="Go Barber">
+        </header>
+        <main class="flex flex-col gap-6 w-full items-center">
+            <div class="flex gap-4">
+                <a class="font-display underline underline-offset-8 decoration-2 decoration-orange-500 font-medium text-white">
+                    Sou cliente
+                </a>
+                <a class="font-display font-medium text-zinc-400 cursor-pointer" asp-controller="Home" asp-action="Barber">
+                    Sou Cabeleireiro
+                </a>
+            </div>
+
+            <form class="text-white font-display text-left flex gap-4 flex-col w-full items-center" asp-controller="" asp-action="">
+                <label for="name">
+                    Nome
+                    <div class="relative w-full">
+                        <i class="ph-user text-2xl text-zinc-600 absolute left-4 top-[30%]"></i>
+                        <input class="bg-zinc-900 pl-12 pr-4 w-[20rem] text-white placeholder-zinc-600 h-14 rounded-md" placeholder="John Doe" type="text" name="name" id="name">
+                    </div>
+                </label>
+
+                <label for="email">
+                    Email
+                    <div class="relative w-full">
+                        <i class="ph-envelope text-2xl text-zinc-600 absolute left-4 top-[30%]"></i>
+                        <input class="bg-zinc-900 pl-12 pr-4 w-[20rem] text-white placeholder-zinc-600 h-14 rounded-md" placeholder="johndoe@example.com" type="email" name="email" id="email">
+                    </div>
+                </label>
+
+                <label for="password">
+                    Senha
+                    <div class="relative w-full">
+                        <i class="ph-lock-simple text-2xl text-zinc-600 absolute left-4 top-[30%]"></i>
+                        <input class="bg-zinc-900 pl-12 pr-4 text-white w-[20rem] placeholder-zinc-600 h-14 rounded-md" placeholder="**************" type="password" name="password" id="password">
+                    </div>
+                </label>
+
+                <input class="text-zinc-800 bg-orange-500 w-[20rem] h-14 rounded-md font-display font-medium text-md hover:bg-orange-400 transition duration-300 cursor-pointer" type="submit" value="Cadastrar">
+            </form>
+
+        </main>
+        <footer>
+            <a class="text-white text-xl flex items-center gap-4 mr-4" asp-controller="Home" asp-action="Index">
+                <i class="ph-arrow-left text-2xl"></i>
+                Voltar para login
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
+
