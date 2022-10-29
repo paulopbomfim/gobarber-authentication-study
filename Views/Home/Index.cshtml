@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null
+    Layout = null;
     ViewData["Title"] = "Login";
 }
 
@@ -8,43 +8,64 @@
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    'display': ['Roboto Slab', 'ui-serif']
+                }
+            }
+        }
+    </script>
     <title>@ViewData["Title"] - GoBarber</title>
 </head>
-<body>
-    <header>
-        <img src="/assets/logo.png" alt="Go Barber">
-    </header>
-    <main class="">
-        <strong>Faça seu login</strong>
-        <form asp-controller="" asp-action="">
-            <label for="email">
-                Email
-                <div>
+<body class="bg-zinc-800/80 bg-blend-hard-light bg-[url('/assets/barber.png')] bg-no-repeat bg-cover bg-[top_right_-40rem] w-screen h-screen">
+    <div class="w-2/5 h-full gap-20 flex items-center justify-center flex-col bg-zinc-800">
+        <header>
+            <img src="/assets/logo.png" alt="Go Barber">
+        </header>
+        <main class="flex flex-col gap-6 w-full items-center">
+            <strong class="font-display font-medium text-white text-2xl">
+                Faça seu login
+            </strong>
 
-                    <input type="email" name="email" id="email">
-                </div>
-            </label>
+            <form class="text-white font-display text-left flex gap-4 flex-col w-full items-center" asp-controller="" asp-action="">
+                <label for="email">
+                    Email
+                    <div class="relative w-full">
+                        <i class="ph-envelope text-2xl text-zinc-600 absolute left-4 top-[30%]"></i>
+                        <input class="bg-zinc-900 pl-12 pr-4 w-[20rem] text-white placeholder-zinc-600 h-14 rounded-md" placeholder="johndoe@example.com" type="email" name="email" id="email">
+                    </div>
+                </label>
 
-            <label for="password">
-                Senha
-                <div>
+                <label for="password">
+                    Senha
+                    <div class="relative w-full">
+                        <i class="ph-lock-simple text-2xl text-zinc-600 absolute left-4 top-[30%]"></i>
+                        <input class="bg-zinc-900 pl-12 pr-4 text-white w-[20rem] placeholder-zinc-600 h-14 rounded-md" placeholder="***************" type="password" name="password" id="password">
+                    </div>
+                </label>
 
-                    <input type="password" name="password" id="password">
-                </div>
-            </label>
+                <input class="text-zinc-800 bg-orange-500 w-[20rem] h-14 rounded-md font-display font-medium text-md hover:bg-orange-400 transition duration-300 cursor-pointer" type="submit" value="Entrar" asp-controller="User" asp-action="Index">
+            </form>
 
-            <input type="submit" value="Entrar">
-        </form>
-
-        <a >Esqueci minha senha</a>
-    </main>
-    <footer>
-        <a asp-controller="Home" asp-action="Signup">
-            Criar conta
-        </a>
-    </footer>
+            <a class="font-display text-md text-white underline cursor-pointer" asp-controller="Home" asp-action="PasswordRecovery">
+                Esqueci minha senha
+            </a>
+        </main>
+        <footer>
+            <a class="text-orange-500 text-xl flex items-center gap-4 mr-4" asp-controller="Home" asp-action="Client">
+                <i class="ph-sign-in "></i>
+                Criar conta
+            </a>
+        </footer>
+    </div>
 </body>
 </html>
 
