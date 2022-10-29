@@ -20,4 +20,9 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult PasswordRecovery()
+    {
+        return View();
+    }
+
 }
