@@ -1,3 +1,5 @@
+@model Client
+
 @{
     Layout = null;
     ViewData["Title"] = "Sign-up";
@@ -40,7 +42,8 @@
                 </a>
             </div>
 
-            <form class="text-white font-display text-left flex gap-4 flex-col w-full items-center" asp-controller="" asp-action="">
+            <form class="text-white font-display text-left flex gap-4 flex-col w-full items-center" asp-controller="Home" asp-action="CreateClient" method="post">
+
                 <label for="name">
                     Nome
                     <div class="relative w-full">
