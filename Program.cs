@@ -1,4 +1,5 @@
 using GoBarber.Data;
+using GoBarber.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDataContext>();
 builder.Services.AddScoped<IApplicationDataContext, ApplicationDataContext>();
+builder.Services.AddScoped<IClientsRepository, ClientsRepository>();
 
 DotNetEnv.Env.Load();
 

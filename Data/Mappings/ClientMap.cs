@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace GoBarber.Data.Mapping;
 
-public class UserMap : IEntityTypeConfiguration<User>
+public class ClientMap : IEntityTypeConfiguration<Client>
 {
-    public void Configure(EntityTypeBuilder<User> builder)
+    public void Configure(EntityTypeBuilder<Client> builder)
     {
-        builder.ToTable("Users");
+        builder.ToTable("Clients");
 
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Id)
@@ -21,9 +21,12 @@ public class UserMap : IEntityTypeConfiguration<User>
         builder.Property(x => x.Password)
             .IsRequired()
             .HasMaxLength(100);
-        builder.Property(x => x.Role)
+        builder.Property(x => x.CreatedAt)
             .IsRequired()
-            .HasMaxLength(6);
+            .HasDefaultValueSql("GETDATE()");
+        builder.Property(x => x.UpdatedAt)
+            .IsRequired()
+            .HasDefaultValueSql("GETDATE()");
 
         builder.Property(x => x.Email)
             .IsRequired()

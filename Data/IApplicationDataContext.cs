@@ -6,6 +6,7 @@ namespace GoBarber.Data;
 
 public interface IApplicationDataContext
 {
-    public DbSet<User> Users { get; set; }
+    public DbSet<Client> Clients { get; set; }
+    public DbSet<Barber> Barbers { get; set; }
     public int SaveChanges();
 }

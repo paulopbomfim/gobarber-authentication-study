@@ -7,7 +7,8 @@ namespace GoBarber.Data;
 
 public class ApplicationDataContext : DbContext, IApplicationDataContext
 {
-    public DbSet<User> Users { get; set; }
+    public DbSet<Client> Clients { get; set; }
+    public DbSet<Barber> Barbers { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
@@ -23,6 +24,7 @@ public class ApplicationDataContext : DbContext, IApplicationDataContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new UserMap());
+        modelBuilder.ApplyConfiguration(new ClientMap());
+        modelBuilder.ApplyConfiguration(new BarberMap());
     }
 }
