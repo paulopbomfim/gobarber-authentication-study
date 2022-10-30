@@ -19,6 +19,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+var context = new ApplicationDataContext();
+context.Database.EnsureCreated();
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
