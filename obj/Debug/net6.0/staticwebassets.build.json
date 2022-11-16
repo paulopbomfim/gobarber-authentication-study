@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "igrkhWRkQEeL8/8mn0IV+J/X6xPjYDnp7KSBYOdddmA=",
+  "Source": "GoBarber",
+  "BasePath": "_content/GoBarber",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "GoBarber/wwwroot",
+      "Source": "GoBarber",
+      "ContentRoot": "/home/paulo/Projects/Portfolio/GoBarber/wwwroot/",
+      "BasePath": "_content/GoBarber",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/home/paulo/Projects/Portfolio/GoBarber/wwwroot/assets/barber.png",
+      "SourceId": "GoBarber",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/paulo/Projects/Portfolio/GoBarber/wwwroot/",
+      "BasePath": "_content/GoBarber",
+      "RelativePath": "assets/barber.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/barber.png"
+    },
+    {
+      "Identity": "/home/paulo/Projects/Portfolio/GoBarber/wwwroot/assets/barbershop.jpg",
+      "SourceId": "GoBarber",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/paulo/Projects/Portfolio/GoBarber/wwwroot/",
+      "BasePath": "_content/GoBarber",
+      "RelativePath": "assets/barbershop.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/barbershop.jpg"
+    },
+    {
+      "Identity": "/home/paulo/Projects/Portfolio/GoBarber/wwwroot/assets/logo.png",
+      "SourceId": "GoBarber",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/paulo/Projects/Portfolio/GoBarber/wwwroot/",
+      "BasePath": "_content/GoBarber",
+      "RelativePath": "assets/logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/logo.png"
+    }
+  ]
+}
